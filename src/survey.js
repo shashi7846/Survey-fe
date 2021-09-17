@@ -18,6 +18,8 @@ function Survey(props){
     let [gender,setgender]=useState("");
     let [dob,setdob]=useState("");
     let [place,setplace]=useState("");
+    let [education,seteducation]=useState("")
+    let [occupation,setoccupation]=useState("")
 
     let history=useHistory();
 
@@ -73,6 +75,22 @@ function Survey(props){
                                     </div>
                                     <input type="text" class="form-control" placeholder="gender" required value={gender} onChange={(e) => {
                                         setgender(e.target.value);
+                                    }}/>
+                                </div>
+                                <div class="input-group form-group mt-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning"></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Education"  required value={education} onChange={(e) => {
+                                        seteducation(e.target.value);
+                                    }}/>
+                                </div>
+                                <div class="input-group form-group mt-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning"></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="occupation"  required value={occupation} onChange={(e) => {
+                                        setoccupation(e.target.value);
                                     }}/>
                                 </div>
                                 <div class="input-group form-group mt-1">
