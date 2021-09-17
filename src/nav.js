@@ -15,8 +15,10 @@ function Nav() {
       <div class="navbar-nav">
           <Link class="nav-item nav-link text-light" to="/register">Register</Link>
           <Link class="nav-item nav-link text-light" to="/login">Login</Link>
-          {/* <Link class="nav-item nav-link text-light" to="/register">Register</Link> */}
-        
+          <Link class="nav-item nav-link text-light" to="/login" onClick={()=>{
+                             window.localStorage.removeItem("app_token"); //removing the jwt token for logging out
+                             history.push(`/login`);
+                        }}>Logout</Link>
           </div>
   </div>
 </nav>
